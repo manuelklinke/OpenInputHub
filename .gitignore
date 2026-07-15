@@ -1,0 +1,58 @@
+# Editor and operating-system noise
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Python caches and local test output
+.venv/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local property-based test state
+/.hypothesis/
+
+# Native and AVR build products
+*.o
+*.obj
+*.elf
+*.map
+*.d
+*.exe
+
+# Common project-local build directories
+build/
+cmake-build-*/
+.pio/
+.cache/
+logs/
+
+# Locally built diagnostic executable (source and Makefile remain tracked)
+/tools/spacecontrol_diag/spacecontrol_diag
+
+# Large local vendor SDK/driver reference tree (keep outside normal Git history)
+vendor/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Temporary analysis exports belong under /tmp, not in the repository
+*.disasm
+*.sections.txt
+
+# Local reverse-engineering evidence and firmware-derived reconstructions
+/atmega324p_*.hex
+/docs/analysis/
+/docs/superpowers/
+/src/reconstructed/
+
+# Keep intentional firmware/resources/libraries, source files, documentation,
+# captures, and checksums elsewhere visible to Git. Avoid broad
+# *.bin/*.hex/*.fmw/*.a/*.so/*.log patterns because those files may be primary
+# project inputs or test fixtures.
